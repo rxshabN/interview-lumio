@@ -18,6 +18,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ response });
   } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { error: "Failed to fetch AI response" },
       { status: 500 }
